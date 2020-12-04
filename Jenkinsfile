@@ -10,7 +10,7 @@ node{
         remote.user = ubuntu
         remote.identityFile = identity
         stage('Local to Remote copy'){
-            bat "scp -r ${localFilePath} ubuntu@160.85.252.170:~/Documents/FuegoGroup/cps/test_scenarios/remoteTests/${groupName}"
+            bat 'scp -r ${localFilePath} ubuntu@160.85.252.170:~/Documents/FuegoGroup/cps/test_scenarios/remoteTests/${groupName}'
         }
         
         stage('Remote SSH') {
