@@ -10,10 +10,11 @@ node{
         remote.user = ubuntu
         remote.identityFile = identity
         stage('Remote SSH') {
+            
             //create folder on remote for github account
-            sshCommand remote: remote, command: "mkdir Documents/FuegoGroup/cps/test_scenarios/remoteTests/${groupName}"
-            //create outputfolder
-            sshCommand remote: remote, command: "mkdir Documents/FuegoGroup/cps/test_scenarios/remoteTests/${groupName}/output"
+            // sshCommand remote: remote, command: "mkdir Documents/FuegoGroup/cps/test_scenarios/remoteTests/${groupName}"
+            // //create outputfolder
+            // sshCommand remote: remote, command: "mkdir Documents/FuegoGroup/cps/test_scenarios/remoteTests/${groupName}/output"
             //copy over scenarios from local to remote
             sshCommand remote: remote, command: "scp -r ${localFilePath} ubuntu@160.85.252.170:~/Documents/FuegoGroup/cps/test_scenarios/remoteTests/${groupName}"
             //activate venv and run cps sorter on scenarios
