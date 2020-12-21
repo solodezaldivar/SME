@@ -2,6 +2,7 @@ def remote = [:]
 remote.name = "ubuntu"
 remote.host = "160.85.252.170"
 remote.allowAnyHosts = true
+
 remote.passphrase = "Mocolococo1!"
 def localFilePath = "C:Users/SOLODE~1/Documents/HS20/cps/test_scenarios/Master-Thesis-CPS-SORTER/RQ1/Full Road/BeamNG/BeamNG_RF_1_5/beamng_risk_1.5"
 def groupName = "solodezaldivar"
