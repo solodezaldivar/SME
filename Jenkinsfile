@@ -9,9 +9,9 @@ node{
         withCredentials([sshUserPrivateKey(credentialsId: 'jenkins', keyFileVariable: 'identity', passphraseVariable:'', usernameVariable: 'ubuntu')]){
         remote.user = ubuntu
         remote.identityFile = identity
-        stage('Local to Remote copy'){
-            bat 'scp -r ${localFilePath} ubuntu@160.85.252.170:~/Documents/FuegoGroup/cps/test_scenarios/remoteTests/${groupName}'
-        }
+        // stage('Local to Remote copy'){
+        //     bat 'scp -r ${localFilePath} ubuntu@160.85.252.170:~/Documents/FuegoGroup/cps/test_scenarios/remoteTests/${groupName}'
+        // }
         
         stage('Remote SSH') {
             
@@ -24,7 +24,7 @@ node{
             //activate venv and run cps sorter on scenarios
             sshCommand remote: remote, command: "source Documents/FuegoGroup/cps/CPS-SORTER/venv/bin/activate\ncps_sorter run-model-eval -i ~/Documents/FuegoGroup/cps/test_scenarios/remoteTests/${groupName} -o ~/Documents/FuegoGroup/cps/test_scenarios/remoteTests/${groupName}/output"
             //copy remote output to local
-            sshCommand remote: remote, command: "scp -r ubuntu@160.85.252.170:~/Documents/FuegoGroup/cps/test_scenarios/remoteTests/${groupName}/output ${localFilePath}"
+            // sshCommand remote: remote, command: "scp -r ubuntu@160.85.252.170:~/Documents/FuegoGroup/cps/test_scenarios/remoteTests/${groupName}/output ${localFilePath}"
         }
         // // activate virtual environment
         // sh '/venv/Scripts/activate'
