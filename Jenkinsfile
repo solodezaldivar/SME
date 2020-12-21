@@ -14,7 +14,7 @@ node{
         // }
         
         stage('Remote SSH') {
-            
+            sshCommand remote: remote, command: "ls"
             //create folder on remote for github account
             // sshCommand remote: remote, command: "mkdir Documents/FuegoGroup/cps/test_scenarios/remoteTests/${groupName}"
             // //create outputfolder
