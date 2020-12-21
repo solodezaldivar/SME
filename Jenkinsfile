@@ -1,6 +1,7 @@
 def remote = [:]
 remote.name = "ubuntu"
 remote.host = "160.85.252.170"
+
 remote.allowAnyHosts = true
 
 remote.passphrase = "Mocolococo1!"
