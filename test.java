@@ -1,1 +1,3 @@
-abcdefgsgsef
+public class test {
+
+}
