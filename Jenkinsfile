@@ -15,6 +15,7 @@ node {
             // sshGet remote: remote, from: 'Documents/FuegoGroup/cps/test_scenarios/remoteTests/solodezaldivar/output', into: 'C:/Users/Solo de Zaldivar/Desktop/test/t1', override:true
             // sshCommand remote: remote, command: 'scp -r ubuntu@160.85.252.170:~/Documents/FuegoGroup/cps/test_scenarios/remoteTests/solodezaldivar/output "C:/Users/Solo de Zaldivar/Desktop/test/t1"'
         }
+        
         // stage("Transfer Results"){
         //     // if find remoteTest/user
         //     // put scenarios
