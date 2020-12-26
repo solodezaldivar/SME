@@ -1,5 +1,4 @@
-import env
-env.
+
 node {
     def remote = [:]
     remote.name = "ubuntu"
