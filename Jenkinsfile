@@ -5,6 +5,7 @@ node {
     remote.allowAnyHosts = true
     remote.user = user
     remote.passphrase = "Mocolococo1!"
+    remote.identityFile = 'C:/Users/Solo de Zaldivar/.ssh/id_rsa'
 
     stage("SSH"){
         sshCommand remote: remote, command: "ls"
